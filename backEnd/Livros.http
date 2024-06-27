@@ -1,0 +1,6 @@
+@Livros_HostAddress = http://localhost:5289
+
+GET {{Livros_HostAddress}}/livro/
+Accept: application/json
+
+###
