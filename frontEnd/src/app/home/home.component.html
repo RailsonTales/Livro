@@ -1,0 +1,71 @@
+<div class="body">
+
+  <div class="titulo">
+    <p class="p-titulo">Livros</p>
+  </div>
+
+  <div class="tabela">
+  
+    <mat-card class="mat-body">
+      <mat-card-title class="mat-card-title">
+        <button  color="#001122" mat-icon-button matTooltip="Adicionar"
+            (click)="btnAdd('')">
+          <mat-icon>add</mat-icon>
+      </button>
+      </mat-card-title>
+      <mat-card-content>
+
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+          <ng-container matColumnDef="id">
+            <th class="tr-head" mat-header-cell *matHeaderCellDef> Id </th>
+            <td class="tr-row" mat-cell *matCellDef="let element"> {{element.id}} </td>
+          </ng-container>
+
+            <ng-container matColumnDef="titulo">
+              <th class="tr-head" mat-header-cell *matHeaderCellDef> Título </th>
+              <td class="tr-row" mat-cell *matCellDef="let element"> {{element.titulo}} </td>
+            </ng-container>
+          
+            <ng-container matColumnDef="autor">
+              <th class="tr-head" mat-header-cell *matHeaderCellDef> Autor </th>
+              <td class="tr-row" mat-cell *matCellDef="let element"> {{element.autor}} </td>
+            </ng-container>
+          
+            <ng-container matColumnDef="genero">
+              <th class="tr-head" mat-header-cell *matHeaderCellDef> Gênero </th>
+              <td class="tr-row" mat-cell *matCellDef="let element"> {{element.genero}} </td>
+            </ng-container>
+          
+            <ng-container matColumnDef="ano">
+              <th class="tr-head" mat-header-cell *matHeaderCellDef> Ano de publicação </th>
+              <td class="tr-row" mat-cell *matCellDef="let element"> {{element.ano}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="options">
+              <th class="tr-head" mat-header-cell *matHeaderCellDef class="sm-column"></th>
+              <td class="tr-row" mat-cell *matCellDef="let element"> 
+                  <div class="botoes-edit-delete">
+                      <button  color="#001122" mat-icon-button matTooltip="Editar"
+                        (click)="btnAdd(element.id)">
+                        <mat-icon>edit</mat-icon>
+                      </button>
+                      <button  color="#ffeedd" mat-icon-button matTooltip="Excluir"
+                        (click)="btnExcluir(element.id)">
+                        <mat-icon>delete</mat-icon>
+                      </button>
+                  </div>
+              </td>
+          </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+      </mat-card-content>
+
+    </mat-card>
+
+  </div>
+
+</div>

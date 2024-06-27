@@ -1,0 +1,47 @@
+<div class="body">
+
+    <div class="titulo">
+      <p class="p-titulo">Adicionar</p>
+    </div>
+
+    <form class="form" createForm="LivroGroup">
+        <mat-card class="mat-body">
+            
+            <mat-form-field style="display: none;">
+                <mat-label>Id</mat-label>
+                    <input type="text" class="input" id="id" matInput>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Título</mat-label>
+                    <input type="text" class="input" id="titulo" matInput>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Autor</mat-label>
+                    <input type="text" class="input" id="autor" matInput>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Gênero</mat-label>
+                    <input type="text" class="input" id="genero" matInput>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Ano de publicação</mat-label>
+                    <input type="text" class="input" id="ano" matInput>
+            </mat-form-field>
+
+            <div class="botoes-edit-delete">
+                
+                <button mat-flat-button (click)="voltar()">
+                    Voltar
+                </button>
+
+                <button mat-flat-button (click)="salvar()">
+                    Salvar
+                </button>
+            </div>
+        </mat-card>
+    </form>
+</div>

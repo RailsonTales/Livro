@@ -1,0 +1,51 @@
+.body {
+    width: 100%;
+}
+
+.mat-card-title {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px 0 0;
+    background-color: unset;
+}
+
+.mat-icon-add {
+    padding: 0 0 0 15px;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-titulo {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    padding: 15px 0 0 0;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+.mat-body {
+    width: 90%;
+    padding: 20px;
+}
+
+.botoes-edit-delete {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field.mdc-text-field--filled {
+    background-color: #42008a !important;
+}
+
+.input {
+    padding-left: 90px;
+}
